@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Merce Technologies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   
+<div class="back">
+<div class="cen">
+        <img src="assets/imgs/merceEmp.png" imageViewer style="border-radius: 60%; max-width:80%; max-height:60%"/>
+        <img src="{{pathForImage(lastImage)}}" style="width: 100%" [hidden]="lastImage === null"> 
+</div>
+<br><br>
+<div class="cen">
+
+  Designation : Application Engineer<br>
+  Company : Merce Technologies<br>
+  Skype : ganesh.p.tiwari<br>
+  Contact : +917738420894<br>
+  Email : ganesh.tiwari@merce.co<br>
+  Github :<a href="https://github.com/ganesh1993">github.com/ganesh1993</a>
+</div>
+<div class="cen">
+  <br/>
+  <img src="assets/imgs/merceLogo.png" style="max-width : 50%">
+<br/>
+</div>    
+<div class="cen"> © Merce Technologies Pvt Ltd<br> </div>
+</div>
+ 
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <button ion-button icon-left (click)="presentActionSheet()">
+        <ion-icon name="camera"></ion-icon>Select Image
+      </button>
+      <button ion-button icon-left (click)="uploadImage()" [disabled]="lastImage === null">
+        <ion-icon name="cloud-upload"></ion-icon>Upload
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
